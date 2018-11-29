@@ -621,14 +621,14 @@
   
   <script type="text/javascript">
     var GUEST = ['nick','mail','link'];
-    var guest = '昵称,邮箱,网址';
+    var guest = 'nick,mail,link';
     guest = guest.split(',').filter(function (item) {
       return GUEST.indexOf(item)>-1;
     });
     new Valine({
         el: '#comments' ,
-        verify: true,
-        notify: true,
+        verify: false,
+        notify: false,
         appId: 'v4tMSyKtnkNXshopxHKzSGBu-gzGzoHsz',
         appKey: 'b0kYAp9zaADOzcuVAbiw4SeT',
         placeholder: '说点什么吧！',
