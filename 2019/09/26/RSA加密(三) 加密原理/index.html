@@ -118,40 +118,25 @@
 
 
 
-  <meta name="description" content="写这篇文章的时候距离2019年只有4个小时了，找了个安静的地方，一个人回忆了这一整年所经历的事情，刚开始也不知从何说起，于是找到了上面这张图片，这大概就是我的2018了。">
-<meta name="keywords" content="生活">
+  <meta name="keywords" content="技术">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2018年终总结">
-<meta property="og:url" content="http://carlwe.com/2018/12/31/2018年终总结/index.html">
+<meta property="og:title" content="RSA加密(三) 加密原理">
+<meta property="og:url" content="http://carlwe.com/2019/09/26/RSA加密(三) 加密原理/index.html">
 <meta property="og:site_name" content="CarlWe">
-<meta property="og:description" content="写这篇文章的时候距离2019年只有4个小时了，找了个安静的地方，一个人回忆了这一整年所经历的事情，刚开始也不知从何说起，于是找到了上面这张图片，这大概就是我的2018了。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img.carlwe.com/summary_of_2018.jpg">
-<meta property="og:image" content="http://img.carlwe.com/IMG_0644.jpg">
-<meta property="og:image" content="http://img.carlwe.com/IMG_1970.jpg">
-<meta property="og:image" content="http://img.carlwe.com/sanlitun_soho.jpg">
-<meta property="og:image" content="http://img.carlwe.com/planetarium.jpg">
-<meta property="og:image" content="http://img.carlwe.com/national_library.jpg">
-<meta property="og:image" content="http://img.carlwe.com/capital_library.jpg">
-<meta property="og:image" content="http://img.carlwe.com/science_museum.jpg">
-<meta property="og:image" content="http://img.carlwe.com/meishuguan.jpg">
-<meta property="og:image" content="http://img.carlwe.com/pku.jpg">
-<meta property="og:image" content="http://img.carlwe.com/IMG_3315.jpg">
-<meta property="og:image" content="http://img.carlwe.com/shisanlin.jpg">
-<meta property="og:image" content="http://img.carlwe.com/shidu.jpg">
-<meta property="og:image" content="http://img.carlwe.com/qingdao.jpg">
-<meta property="og:updated_time" content="2019-03-24T12:44:18.076Z">
+<meta property="og:image" content="https://img.carlwe.com/rsa_lock.jpg">
+<meta property="og:image" content="https://img.carlwe.com/rsa_bignumber.jpg">
+<meta property="og:updated_time" content="2019-09-28T15:43:51.702Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2018年终总结">
-<meta name="twitter:description" content="写这篇文章的时候距离2019年只有4个小时了，找了个安静的地方，一个人回忆了这一整年所经历的事情，刚开始也不知从何说起，于是找到了上面这张图片，这大概就是我的2018了。">
-<meta name="twitter:image" content="https://img.carlwe.com/summary_of_2018.jpg">
+<meta name="twitter:title" content="RSA加密(三) 加密原理">
+<meta name="twitter:image" content="https://img.carlwe.com/rsa_lock.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="http://carlwe.com/2018/12/31/2018年终总结/">
+  <link rel="canonical" href="http://carlwe.com/2019/09/26/RSA加密(三) 加密原理/">
 
 
 
@@ -161,7 +146,7 @@
   };
 </script>
 
-  <title>2018年终总结 | CarlWe</title>
+  <title>RSA加密(三) 加密原理 | CarlWe</title>
   
 
 
@@ -343,7 +328,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://carlwe.com/2018/12/31/2018年终总结/">
+    <link itemprop="mainEntityOfPage" href="http://carlwe.com/2019/09/26/RSA加密(三) 加密原理/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CarlWe">
@@ -360,7 +345,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">2018年终总结
+          <h1 class="post-title" itemprop="name headline">RSA加密(三) 加密原理
               
             
           </h1>
@@ -385,7 +370,7 @@
                 
               
 
-              <time title="创建时间：2018-12-31 18:52:15" itemprop="dateCreated datePublished" datetime="2018-12-31T18:52:15+08:00">2018-12-31</time>
+              <time title="创建时间：2019-09-26 12:06:46" itemprop="dateCreated datePublished" datetime="2019-09-26T12:06:46+08:00">2019-09-26</time>
             
 
             
@@ -402,7 +387,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-24 20:44:18" itemprop="dateModified" datetime="2019-03-24T20:44:18+08:00">2019-03-24</time>
+                <time title="修改时间：2019-09-28 23:43:51" itemprop="dateModified" datetime="2019-09-28T23:43:51+08:00">2019-09-28</time>
               
             
           </span>
@@ -416,8 +401,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/12/31/2018年终总结/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/12/31/2018年终总结/" itemprop="commentCount"></span>
+                <a href="/2019/09/26/RSA加密(三) 加密原理/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/09/26/RSA加密(三) 加密原理/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -425,7 +410,7 @@
 
           
           
-             <span id="/2018/12/31/2018年终总结/" class="leancloud_visitors" data-flag-title="2018年终总结">
+             <span id="/2019/09/26/RSA加密(三) 加密原理/" class="leancloud_visitors" data-flag-title="RSA加密(三) 加密原理">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -456,84 +441,92 @@
       
 
       
-        <p><img src="https://img.carlwe.com/summary_of_2018.jpg" alt=""></p>
-<blockquote>
-<p>写这篇文章的时候距离2019年只有4个小时了，找了个安静的地方，一个人回忆了这一整年所经历的事情，刚开始也不知从何说起，于是找到了上面这张图片，这大概就是我的2018了。</p>
-</blockquote>
+        <p><img src="https://img.carlwe.com/rsa_lock.jpg" alt=""></p>
 <a id="more"></a>
-<p>没错，2018对我来说是转折的一年，转折的路上是孤独。这一年从武汉辞掉工作后来到了北京，回到了9年前我生活的地方，即陌生又熟悉。陌生的是我需要适应完全不同的生活和工作方式，熟悉的是，我回到了父母的身边。在离开武汉的时候我清楚的记得一位同事跟我讲了一句话：“相信自己，你这次选择肯定不会后悔！“。</p>
+<p>在上篇文章<strong><a href="https://carlwe.com/2019/09/16/RSA%E5%8A%A0%E5%AF%86%28%E4%BA%8C%29%20%E5%8A%A0%E5%AF%86%E8%BF%87%E7%A8%8B/">RSA加密(二)</a></strong>中我们介绍了RSA加密的过程，并留下了三个问题：</p>
+<p><strong>遗留问题</strong>：</p>
+<ul>
+<li>RSA在公钥和密文传输的过程中就真的很安全吗？</li>
+<li>为什么解密的时候原文：m 就等于  $c^d$ % n呢？ </li>
+<li>m&lt;n，这就导致RSA加密的内容长度受到了限制，那如何加密发送一段很长的文本呢？</li>
+</ul>
+<p>在分析安全性之前，我们先简短的回顾下加解密过程：</p>
+<h2 id="简单回顾"><a href="#简单回顾" class="headerlink" title="简单回顾"></a>简单回顾</h2><h3 id="1-生成共钥、私钥"><a href="#1-生成共钥、私钥" class="headerlink" title="1.生成共钥、私钥"></a>1.生成共钥、私钥</h3><ol>
+<li>找出质数p、q，p≠q.</li>
+<li>计算n = p x q.</li>
+<li>计算n的欧拉函数φ(n)=(p-1)(q-1)</li>
+<li>选取整数e，条件是1&lt; e &lt; φ(n)，且e与φ(n) 互质，则公钥为:（e,n)</li>
+<li>计算e对于φ(n)的模反元素d，将d和当作私钥:（d,n)</li>
+</ol>
+<h3 id="2-加密、解密"><a href="#2-加密、解密" class="headerlink" title="2.加密、解密"></a>2.加密、解密</h3><ol>
+<li><strong>加密</strong>：用公钥对信息m加密，计算密文：c = $m^e​$ % n.</li>
+<li><strong>解密</strong>：用私钥对密文c解密，计算原文：m =  $c^d$ % n.</li>
+</ol>
+<p>参考上面的加密过程，我们先来看看RSA加密的安全性。</p>
+<h2 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h2><p>说到安全性，首先我们想到的就是如何破解，首先在传输过程中被暴露的信息如下：</p>
 <blockquote>
-<p>这篇文章主要记录下这一年中的几个阶段，以及自己的想法是如何随着经历的事情所改变。</p>
+<p><strong>公钥</strong>:（e,n) 、 <strong>密文</strong>：c</p>
 </blockquote>
-<h2 id="和武汉说再见"><a href="#和武汉说再见" class="headerlink" title="和武汉说再见"></a>和武汉说再见</h2><p>离开武汉其实是过年的时候跟家里人商量决定的，父母并没有要求我过来，他们只是说让我自己决定。离开武汉同学同事都问我为什么，对我自己来说并没有什么特别明确的理由，简单说我不应该继续待在武汉了，而北京是最好的去处。</p>
-<p>在武汉上大学，毕业后在数文工作快2年，算起来在武汉生活也有快6年的时间了，离开肯定是不舍的。但既然决定离开，就得着手准备离开的事情了，提前跟公司提出离职申请，在公司我最应该感谢的应该是总经理了，所以决定先找总经理讲出这件事。约好时间和地点，来到天台边，那天天空阴沉，气温不是那么暖和，总经理表情看起来不是那么放松，可能是我每次找总经理谈话都是有重要的事情吧。我很直接说出了这次的话题，总经理先是说他已经有所预料，但没过一下，他摘下了眼镜抱住我，等我看到他的时候眼泪已经从眼角留下，我永远也忘不了那一刻，是上级、似兄弟、情谊永存。</p>
-<p>从数文实习、独自开发一个APP、整个事业部的APP设计和开发再到完整负责一个对外项目到交付。一路走来，学到了很多东西，真心希望数文在文化遗产行业能够越做越好！最后一天请公司同事和领导吃了一顿饭，就算是告别了。</p>
-<p><img src="http://img.carlwe.com/IMG_0644.jpg" alt=""></p>
-<h2 id="去云南"><a href="#去云南" class="headerlink" title="去云南"></a>去云南</h2><p>记得那天是3月15日，正值武汉樱花盛开的季节。一直很想去一次云南，没想到这次是一个人去了。也是自己第二次一个人出去玩，第一次是去厦门。3月16日，正式结束工作的第一天，虽然背着一个20多斤的背包，但心里却是如释重负。早起逛了武大的樱园，也是这么多年第一次去武大看樱花。之后就踏往了去云南的飞机，从昆明转机到腾冲，找到了前同事，在腾冲待了2天，很不错的体验。之后一个人去到了大理、丽江、昆明。印象最深的是一个人背着三脚架相机和行李，爬上3900多米的苍山顶拍延时，因为要赶下午去丽江的火车，下来的时候高反，真的挺难受。所以去这种地方最好是几个朋友一起去，丽江太累就没有去泸沽湖和玉龙雪山，去了比较近的拉市海，风景也很好，这一次出去玩的照片会在后面写一个年度照片总结的博客，尽请期待！</p>
-<p><img src="http://img.carlwe.com/IMG_1970.jpg" alt=""></p>
-<h2 id="遇见大玩家"><a href="#遇见大玩家" class="headerlink" title="遇见大玩家"></a>遇见大玩家</h2><ul>
-<li>找工作</li>
-</ul>
-<p>从云南回到北京，没有了工作的日子的确不是那么让人舒心。接下来就是找工作了。虽然父母说不用着急，慢慢找。但自己也知道留给自己找工作的黄金时间并不多了。算起来已经3年都没有去应聘了，之前都是面试别人，现在轮到自己反而更加紧张起来。时间来到4月初，刚开始面试的几家都不太满意。因为学历，大的公司一般都没有面试机会，到后来慢慢开始找到面试心得，但又因为要住在通州，所以望京、中关村太远不在考虑范围内，故只能在国贸附近找。功夫不负有心人，那天在面试回家路上一个电话打过来，说对我的简历比较感兴趣，让我过去面试，在三里屯。先是笔试、再技术面、技术老大面、HR面，感觉情况还不错，尤其是和技术老大的谈话很轻松，公司环境也挺好。下午回去等结果，晚上HR打电话来拿到offer，工资给的比我要求的还多一些，回家休整三天，下周二入职。</p>
+<p>先来看下解密公式：m =  $c^d$ % n，想要得到信息m，就得知道c、d和n，对比上面截获的内容，c和n都已知，只有d我们不知道，查看上面生成公私钥步骤5，d是e对于φ(n)的模反元素，即有：</p>
+<blockquote>
+<p>ed % φ(n) = 1</p>
+</blockquote>
+<p>e在公钥中我们已知，要求d，所以求出φ(n)就行，那φ(n)又怎么求呢？通过上面生成共私钥步骤3：</p>
+<blockquote>
+<p>φ(n)=(p-1)(q-1)</p>
+</blockquote>
+<p>所以问题变成了，我们只需要求出p和q就可以了，那p和q又怎么求呢，通过上面生成共私钥步骤2：</p>
+<blockquote>
+<p>n = p x q</p>
+</blockquote>
+<p>n在公钥中我们已知，只需要分解n就可以，但在实际应用中，n一般取1024位或更大的2048位，在第一篇文章中我们知道分解大数的质因数是当今三大数学难题之一，所以RSA加密在理论上是安全的。当今人类被报道破解的最大密钥长度是768位，232个十进制数，写下来如下:</p>
+<p><img src="https://img.carlwe.com/rsa_bignumber.jpg" alt=""></p>
+<p>一般认为1024位的密钥基本安全，长度为2048位的密钥极其安全。就拿上述整数来说大小为$10^{232}$来暴力破解，用当今最快的超级计算机<a href="http://www.chinastor.com/hpc-top500/" target="_blank" rel="noopener">美国Summit</a>，计算速度达到每秒200petaflops（千万亿次）即每秒$2*10^{17}$次，加上高效的质因数分解算法<a href="https://www.cnblogs.com/Iamafool/p/10924390.html" target="_blank" rel="noopener">Pollard Rho算法</a> （时间复杂度为O($n^{\frac 14}$)，计算下来也需要大概$10^{33}$ 年，(当然实际破解中会用到很多方法大幅降低破解难度)，所以在当下计算质因数分解没有实质性理论突破的时代，只要密钥长度足够长，用RSA加密的信息实际上是不能被解破的。</p>
+<h2 id="解密原理"><a href="#解密原理" class="headerlink" title="解密原理"></a>解密原理</h2><p>根据上面的加解密过程：<strong>加密</strong>：c = $m^e$ % n ，这个过程好理解，几个参数都是计算好的，没什么不好理解，我们来看下解密公式：</p>
+<blockquote>
+<p>$c^d$ % n = m</p>
+</blockquote>
+<p>为什么计算的结果就是原文呢？下面我们来证明下上面的解密公式：</p>
+<ol>
+<li>根据加密公式，可转换为c = $m^e-kn$.</li>
+<li>将上式带入解密公式 m =  $c^d$ % n 得到： $(m^e-kn)^d$ % n = m.</li>
+<li>因为$(m^e-kn)^d$ 中第二项含有kn是n的倍数，所以不管d是多少，乘开后，只有$m^{ed}$项不含有n，而含有n的项都能被n整除，所以上式可以简化成 $m^{ed}$ % n = m.</li>
+<li>上面加密过程第5步求模反元素公式： ed % φ(n) = 1，可写成 ed = hφ(n)+1，将其带入$m^{ed}$ % n = m</li>
+</ol>
+<p><strong>即证明</strong>：$m^{hφ(n)+1}$ % n = m 或 $m^{ed}$ % n = m.</p>
+<p>下面我们分两种情况来证明：</p>
 <ul>
-<li>新的工作环境</li>
-</ul>
-<p>公司是做互联网金融的，环境和硬件设施都很好，福利也很人性化。直属领导人很nice，有不懂的都会细心从原理上解答。紧接着适应早11点、晚9点的工作节奏。工作上，熟悉公司的代码、试着实现一些小功能、参与到正式版本的开发、到与测试、产品、设计的协调和沟通。每一个阶段对自己来说都是不一样的过程，但还好，这些都顺手的适应及完成了。这里要着重说一下，公司技术氛围很好，每周会有技术分享，每个人都可以上去讲，从中可以学到很多新知识。经历了4、5月份到6月份后，对于工作就没有那么大的压力了，算是从心理上适应了下来。</p>
-<p><img src="http://img.carlwe.com/sanlitun_soho.jpg" alt=""></p>
-<h2 id="重温北京"><a href="#重温北京" class="headerlink" title="重温北京"></a>重温北京</h2><p>工作上适应下来后，每个周末的时间就空余出来了，对于自己7、8、9三个月来说，可以用<strong>重温北京</strong>来总结了。这几个月先后遍历了自己在小学、初中时所喜欢去的地方，以及想去的地方：</p>
-<ul>
-<li>北京天文馆</li>
-</ul>
-<p><img src="http://img.carlwe.com/planetarium.jpg" alt=""></p>
-<ul>
-<li>国家图书馆</li>
-</ul>
-<p><img src="http://img.carlwe.com/national_library.jpg" alt=""></p>
-<ul>
-<li>首都图书馆</li>
-</ul>
-<p><img src="http://img.carlwe.com/capital_library.jpg" alt=""></p>
-<ul>
-<li>中国科技馆</li>
-</ul>
-<p><img src="http://img.carlwe.com/science_museum.jpg" alt=""></p>
-<ul>
-<li>中国美术馆</li>
-</ul>
-<p><img src="http://img.carlwe.com/meishuguan.jpg" alt=""></p>
-<ul>
-<li>北京大学</li>
-</ul>
-<p><img src="http://img.carlwe.com/pku.jpg" alt=""></p>
-<ul>
-<li>香山公园</li>
-</ul>
-<p><img src="http://img.carlwe.com/IMG_3315.jpg" alt=""></p>
-<ul>
-<li>十三陵</li>
-</ul>
-<p><img src="http://img.carlwe.com/shisanlin.jpg" alt=""></p>
-<ul>
-<li>十渡</li>
-</ul>
-<p><img src="http://img.carlwe.com/shidu.jpg" alt=""></p>
-<p>但还有一个地方以后肯定还会再去一次，那就是初中的学校了，关于初中后面也会有文章讲到，那里有美好的回忆。</p>
-<h2 id="再次起航"><a href="#再次起航" class="headerlink" title="再次起航"></a>再次起航</h2><p>十一放假去了趟山东，回来后发现这几个月其实也没做什么，时间匆匆的流逝了。随着工作逐渐步入正轨，我想该进行一些改变了，不能让自己过的如此安逸，于是这两个月在工作之余开始尝试一些新东西：</p>
-<ul>
-<li>博客</li>
+<li><strong>m、n互质</strong></li>
 </ul>
 <blockquote>
-<p>一次在公司周会上讨论分享的时候有讨论到写博客的事情，再加上这半年在公司也积累了一些文章，所以准备开始着手写博客。通过11、12这两个月我的博客基本上也搭建起来了，并输出了几篇博客，算是18年的一个成果吧。</p>
+<ol>
+<li>由欧拉定理可知 $m^{φ(n)}$%n = 1.</li>
+<li>上式可变为：$ (m^{φ(n)})^h$ % n = 1，例如$5^1$%4=1、$5^2$%4=1、$5^3$%4=1…</li>
+<li>$ (m^{φ(n)})^h$ % n = 1 等价于 $m^{hφ(n)}$ % n = 1，可写成$m·m^{hφ(n)}$ % n = m，例如5%4=1、2·5%4=2、3·5%4=3、4·5%4=4</li>
+<li>$m·m^{hφ(n)}$ % n = m 可写成 $m^{hφ(n)+1}$ % n = m，原式得证！</li>
+</ol>
 </blockquote>
 <ul>
-<li>小游戏</li>
+<li><strong>m、n不互质</strong></li>
 </ul>
 <blockquote>
-<p>通过这个月的学习，小游戏的微信端和cocos端的开发基本已经掌握，自己的第一个小游戏也正在开发中 ，会尽早上线的。</p>
+<ol>
+<li>由加密过程：n = p x q，故n只能被分解成p和q的乘积，因为m和n不互质，故m一定是p或q的倍数，以m=kp为例，此时kp和q互质。</li>
+<li>根据欧拉定理有：$(kp)^{φ(q)}$ % q = 1即：$ (kp)^{q-1} $ % q = 1.</li>
+<li>上式进行h(p-1)次方运算再乘kp后得到：$[ (kp)^{q-1}]^{h(p-1)} $  x kp % q = kp，左边合并指数后得到：$(kp)^{h(p-1)(q-1)+1} $ % q = kp.</li>
+<li>从上面我们已知 ed = hφ(n)+1即ed =h(p-1)(q-1)+1，所以上式可简化成：$(kp)^{ed}$ % q = kp.</li>
+<li>上式可写成$(kp)^{ed}$ = tq + kp，可以发现，等式左边肯定是p的倍数，右边kp是p的倍数，所以tq也是p的倍数，而p和q互质，所以t一定能被p整除，即一定有 t =t’p，带入可得：$(kp)^{ed}$ = t’pq + kp.</li>
+<li>从上面可知m=kp、n=pq，所以带入上式得: $m^{ed}$ = t’n + m，即：$m^{ed}$ % n = m，原式得证！</li>
+</ol>
 </blockquote>
-<p>最后这两个月在工作上也取得了一些进步，数据结构算法持续学习中、掌握Kotlin、Android内存优化也有更深入的研究和学习。一个好消息在2018的最后一个工作日传来，最近几个版本APP的崩溃率都降低到了万分之五以下，得到了公司领导的奖励，这里小小的庆祝下。</p>
-<p><img src="http://img.carlwe.com/qingdao.jpg" alt=""></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>2018对我来说是一个很大的转折，经历了这一年从辞职、找工作、适应新环境、到中途几个月的迷茫、再到最后确立了新的方向。峰回路转，相信经历了本命年的洗礼后，2019年的我会变得更加从容。</p>
+<p>可以看到在证明解密公式的过程中，我们频繁用到了欧拉函数和欧拉定理，如果没有欧拉函数和欧拉定理也不会有RSA算法的出现，可见理论数学的重要性！</p>
+<h2 id="加密长度限制"><a href="#加密长度限制" class="headerlink" title="加密长度限制"></a>加密长度限制</h2><p>我们再来看第一个问题，由于生成随机的大质数p和q也是需要算法的，当n的长度为8192位时，通过macbook pro实测生成密钥时间在5秒以上，效率直线下降。这样就导致n不能太大，所以加密的文本也不能太长，一般来讲我们有如下两种方式来解决这个问题：</p>
+<ol>
+<li><strong>分段加密</strong>：即可以通过将发送的消息分成多段，分别加密，再进行传输。</li>
+<li><strong>结合AES加密</strong>：可通过对称性加密算法AES对长文本进行快速加密，再通过RSA加密算法对AES加密的密钥进行加密。</li>
+</ol>
+<p>第二种方式，只有破解加密后的密钥才能解密原文，但要破解加密后的密钥，相当于破解RSA加密，所以这种方式很好的解决了长文本加密的问题，并在实际开发中得到了广泛的应用。</p>
+<h2 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h2><p>到这里RSA加密系列的文章就结束了，我们从密码学的发展，引出了非对称性加密，从而带大家认识了RSA加密的过程，最后剖析了RSA加密的原理，从而更深层次的了解到了RSA加密的安全性。但随着<a href="https://baike.baidu.com/item/%E9%87%8F%E5%AD%90%E5%8A%A0%E5%AF%86/11035670?fr=aladdin" target="_blank" rel="noopener">量子加密</a>的提出，尤其是<a href="https://www.cnblogs.com/h2zZhou/p/5495732.html" target="_blank" rel="noopener">秀儿算法</a>的提出，RSA加密在量子计算机普及后将变得不再安全，相信到那时密码学必会有革命性的变化。</p>
 
       
     </div>
@@ -557,7 +550,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/生活/" rel="tag"># 生活</a>
+            <a href="/tags/技术/" rel="tag"># 技术</a>
           
         </div>
       
@@ -590,8 +583,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/25/二维码为何长这个样子/" rel="next" title="二维码为何长这个样子">
-                <i class="fa fa-chevron-left"></i> 二维码为何长这个样子
+              <a href="/2019/09/16/RSA加密(二) 加密过程/" rel="next" title="RSA加密(二) 加密过程">
+                <i class="fa fa-chevron-left"></i> RSA加密(二) 加密过程
               </a>
             
           </div>
@@ -599,10 +592,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/11/浅谈Android内存优化/" rel="prev" title="浅谈Android内存优化">
-                浅谈Android内存优化 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -780,7 +769,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#和武汉说再见"><span class="nav-number">1.</span> <span class="nav-text">和武汉说再见</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#去云南"><span class="nav-number">2.</span> <span class="nav-text">去云南</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遇见大玩家"><span class="nav-number">3.</span> <span class="nav-text">遇见大玩家</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重温北京"><span class="nav-number">4.</span> <span class="nav-text">重温北京</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#再次起航"><span class="nav-number">5.</span> <span class="nav-text">再次起航</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单回顾"><span class="nav-number">1.</span> <span class="nav-text">简单回顾</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-生成共钥、私钥"><span class="nav-number">1.1.</span> <span class="nav-text">1.生成共钥、私钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-加密、解密"><span class="nav-number">1.2.</span> <span class="nav-text">2.加密、解密</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安全性"><span class="nav-number">2.</span> <span class="nav-text">安全性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解密原理"><span class="nav-number">3.</span> <span class="nav-text">解密原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加密长度限制"><span class="nav-number">4.</span> <span class="nav-text">加密长度限制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#展望"><span class="nav-number">5.</span> <span class="nav-text">展望</span></a></li></ol></div>
             
 
           </div>
@@ -1007,6 +996,36 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.staticfile.org/MathJax/MathJax-2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+    overflow: auto hidden;
+}
+</style>
+
+    
   
 
 
