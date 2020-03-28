@@ -132,7 +132,7 @@
 <meta property="og:image" content="http://img.carlwe.com/plugin_xiaomi_push.png">
 <meta property="og:image" content="http://img.carlwe.com/push_manifest.png">
 <meta property="og:image" content="http://img.carlwe.com/push_confilct_right.png">
-<meta property="og:updated_time" content="2020-03-28T15:24:13.720Z">
+<meta property="og:updated_time" content="2020-03-28T15:28:12.625Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android厂商推送冲突了">
 <meta name="twitter:image" content="http://img.carlwe.com/push_confilt_xiaomi.png">
@@ -457,7 +457,7 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">receiver</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:name</span>=<span class="string">"com.netease.nimlib.mixpush.mi.MiPushReceiver"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:exported</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">intent-filter</span> <span class="attr">android:priority</span>=<span class="string">"0x7fffffff"</span>&gt;</span> //这里设置了优先级</span><br><span class="line">        <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"com.xiaomi.mipush.RECEIVE_MESSAGE"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"com.xiaomi.mipush.MESSAGE_ARRIVED"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"com.xiaomi.mipush.ERROR"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">receiver</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>这个<code>MiPushReceiver</code>我们查看源码会发现它主要是处理并转发小米厂商推送的各种事件，<code>MiPushReceiver</code>同样是继承自小米push sdk中的<code>PushMessageReceiver</code>，<code>MiPushReceiver</code>代码如下：</p>
 <p><img src="http://img.carlwe.com/xiaomi_push_receiver.png" alt=""></p>
-<p>到这里官方文档说已经可以开始测试推送消息，于是把手机进程杀掉，给手机发松一条消息，确实能够收到。但进程杀掉后原本接收正常的极光推送，现在却收不到了🤪，其他厂商机型有的能收到，但点击推送消息不能打开App，我们看下图来分析原因：</p>
+<p>到这里官方文档说已经可以开始测试推送消息，于是把手机进程杀掉，给手机发送一条消息，确实能够收到。但进程杀掉后原本接收正常的极光推送，现在却收不到了🤪，其他厂商机型有的能收到，但点击推送消息不能打开App，我们看下图来分析原因：</p>
 <p><img src="http://img.carlwe.com/push_confilt_xiaomi.png" alt=""></p>
 <blockquote>
 <p>不管是极光的消息还是云信的消息，首先都会把消息推给小米的推送云服务，然后小米手机系统会和小米的推送云服务保持一个长链接，MiPush SDK收到后，首先会找到继承了<code>PushMessageReceiver</code> 并且注册到Manifest的Receiver，并把消息传给这个Receiver，因为极光和云信在Manifest中都注册了<code>PushMessageReceiver</code>，所以这个时候谁能收到就存在不确定性了。如果配置了<code>priority</code> 优先级，则优先级高的会收到。</p>
